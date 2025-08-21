@@ -1,5 +1,5 @@
 ---
-title: "Another service2"
+title: "Another Product2"
 date: 2024-10-02T20:16:14+03:00
 featureImage: images/blog2.jpg
 draft: false
