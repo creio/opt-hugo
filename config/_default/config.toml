@@ -1,6 +1,7 @@
 # General Settings
 title = "InterOpt"
-baseURL = "https://interopt-company.ru/" #YOUR SITE URL
+# baseURL = "https://interopt-company.ru/" #YOUR SITE URL
+baseURL = "https://opt-hugo.netlify.app/" #YOUR SITE URL
 DefaultContentLanguage = "ru" # Site language. Available translations in the theme's `/i18n` directory.
 languageCode = "ru-ru"
 theme = "mountain"
