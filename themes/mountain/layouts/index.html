@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+  {{ $page := . }}
+
+  {{ range $section := $.Params.sections }}
+    {{/* имя файла partial без префикса */}}
+    {{ $partialName := printf "%s.html" $section }}
+    {{/* полный путь только для Exists */}}
+    {{ $partialPath := printf "partials/%s" $partialName }}
+
+    {{ if templates.Exists $partialPath }}
+      {{ partial $partialName $page }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+

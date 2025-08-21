@@ -1,0 +1,25 @@
+{
+  "name": "pehtheme",
+  "version": "1.0.1",
+  "description": "An open-source Hugo theme lovingly crafted using Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "create": "exec-bin node_modules/.bin/hugo new",
+    "dev": "exec-bin node_modules/.bin/hugo server --bind=0.0.0.0 --disableFastRender --environment development",
+    "build:preview": "npm run build -D -F",
+    "build": "exec-bin node_modules/.bin/hugo --gc --minify",
+    "clean": "shx rm -rf public resources .hugo_build.lock",
+    "clean:install": "shx rm -rf package-lock.json node_modules"
+  },
+  "keywords": [
+    "hugo"
+  ],
+  "author": "creio",
+  "license": "MIT",
+  "devDependencies": {
+    "shx": "^0.3.3",
+    "exec-bin": "^1.0.0",
+    "hugo-extended": "^0.147.9",
+    "npm-run-all": "^4.1.5"
+  }
+}

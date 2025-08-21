@@ -1,0 +1,62 @@
+[readMore]
+other = "Читать далее"
+
+[authorBy]
+other = "от"
+
+[yourName]
+other = "Имя"
+
+[yourEmail]
+other = "Email"
+
+[yourMessage]
+other = "Сообщение"
+
+[submit]
+other = "Отправить"
+
+[sendMessage]
+other = "Отправить сообщение"
+
+[latestPosts]
+other = "Последнии публикации"
+
+[taxonomyPageList]
+other = "Последнии публикации в"
+
+[share]
+other = "Поделиться"
+
+[tags]
+other = "Теги"
+
+[comments]
+other = "Комментарии"
+
+[nextPost]
+other = "Следующий пост"
+
+[prevPost]
+other = "Предыдущий пост"
+
+[category]
+other = "Категория"
+
+[search]
+other = "Поиск"
+
+[searchResults]
+other = "Извините, но ничто не соответствовало вашими поисковым терминам. Пожалуйста, попробуйте еще раз с другими ключевыми словами."
+
+[searchNotFound]
+other = "Не найдено"
+
+[categories]
+other = "Категории"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Страница не найдена."

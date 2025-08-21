@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ "<!-- heading -->" | safeHTML }}
+<div class="container contact-page">
+  <div class="row">
+    <div class="col-md-12">
+
+        <div class="heading-box">
+          <h1>{{ .Title }}</h1>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container contact-page">
+  <div class="row">
+    <div class="col-md-12">
+      {{ .Content }}
+      {{ partial "formsubmit" . }}
+    </div>
+  </div>
+</div>
+{{ end }}

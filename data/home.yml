@@ -1,0 +1,66 @@
+### Sections content configuration file
+### Here you can find all content in all pre-build sections
+
+### Header [ headerSection ]
+header:
+  enable: true
+  logo: "/images/logo.png"
+  widthLogo: 190
+  heightLogo: 190
+  title: "МЕЖДУНАРОДНАЯ ТОРГОВЛЯ"
+  description: "Ваш надежный партнер на рынках Казахстана, России и Китая."
+  # countdown: "Jun 27, 2026 20:39:00"
+  urlMouse: "#services"
+
+### Services [ servicesSection ]
+services:
+  enable: true
+  items:
+    - title: "Заказ"
+      icon: "fas fa-envelope"
+      text: "Свяжитесь с нами и запросите цену с условиями."
+
+    - title: "Договор поставки"
+      icon: "fas fa-file-lines"
+      text: "Заключите с нами договор поставки товара по Вашим условиям."
+
+    - title: "Доставка"
+      icon: "fas fa-truck"
+      text: "Ожидайте доставку по условиям DAP в срок, предусмотренный договором."
+
+### Subscribe [ subscribeSection ]
+subscribe:
+  enable: true
+  parallax: "/images/keyboard-bg.jpg"
+  icon: "fas fa-paper-plane"
+  title: "Подпишитесь на рассылку"
+  # google form
+  formId: "1FAIpQLSeCFeNlAQKsrcUj5JAQQ9PKshx29HOEpcMh51QMRM-qNUNWow"
+  entryId: "entry.1045781291"
+
+### Contact [ contactSection ]
+contact:
+  enable: true
+  title: "Обратная связь"
+
+### Map [ mapSection ]
+map:
+  enable: true
+  items:
+    - title: "Казахстан, г Алматы, ул. Богенай батыра, 104"
+      icon: "fas fa-location-dot"
+
+    - title: "+77019992939"
+      icon: "fas fa-phone"
+
+    - title: "info@interopt-company.ru"
+      icon: "fas fa-paper-plane"
+
+  # Google Maps widget: If "googleMapsApiKey" is not set, no key will be passed to Google (which likely results in a broken map widget).
+  # googleMapsApiKey: "AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"
+  # latitude: "-37.8602828"
+  # longitude: "145.079616"
+  # iconLocation: "/images/icon-location.png"
+  # titleIconLocation: "Melbourne, Australia"
+  # colorMap: "#2d313f"
+  # mapZoom: 10

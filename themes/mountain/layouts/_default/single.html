@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+  {{ $builder := .Params.builder }}
+  {{ $page := . }}
+
+  {{ if $builder }}
+
+    {{ range $section := .Params.sections }}
+      {{ $partialName := printf "%s.html" $section }}
+      {{ $partialPath := printf "partials/%s" $partialName }}
+      {{ if templates.Exists $partialPath }}
+        {{ partial $partialName $page }}
+      {{ end }}
+    {{ end }}
+
+  {{ else }}
+
+    {{ "<!-- heading -->" | safeHTML }}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="heading-box">
+              <h1>{{ .Title }}</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+
+  {{ end }}
+{{ end }}
+

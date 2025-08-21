@@ -1,0 +1,75 @@
+{{ $sidebar := .Site.Params.sidebar }}
+
+  <aside class="widget-area wow fadeUp" data-wow-delay=".3s">
+
+      {{ if $sidebar.search }}
+      <section class="widget widget-search">
+        <h4 class="widget-title">{{ i18n "search" }}</h4>
+        <form id="search-form" role="search" action="{{ "search" | absURL }}" method="get">
+          <input type="search" id="search-query" placeholder="{{ i18n "search" }}" aria-label="Search" name="q" />
+          <button type="submit" id="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </section>
+      {{ end }}
+
+      {{ if $sidebar.categories }}
+      <section class="widget widget-categories">
+        <h4 class="widget-title">{{ i18n "categories" }}</h4>
+        <ul>
+          {{ $productsPages := where .Site.Pages "Section" "products" }}
+          {{ $categoryCount := dict }}
+
+          {{ range $productsPages }}
+            {{ if .Params.categories }}
+              {{ range .Params.categories }}
+                {{ $category := . }}
+                {{ $count := index $categoryCount $category | default 0 }}
+                {{ $categoryCount = merge $categoryCount (dict $category (add $count 1)) }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ range $category, $count := $categoryCount }}
+            {{ with $.Site.GetPage (printf "/categories/%s" $category) }}
+              <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ $count }})</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ if $sidebar.latestPosts }}
+      <section class="widget widget-recent-entries">
+        <h4 class="widget-title">{{ i18n "latestPosts" }}</h4>
+        <ul>
+          {{ range first 4 (where .Site.RegularPages "Section" "products") }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ if $sidebar.tags }}
+      <section class="widget widget-tagcloud">
+        <h4 class="widget-title">{{ i18n "tags" }}</h4>
+        <div class="tagcloud">
+          {{ $productsPages := where .Site.Pages "Section" "products" }}
+          {{ $tags := slice }}
+
+          {{ range $productsPages }}
+            {{ if .Params.tags }}
+              {{ $tags = $tags | union .Params.tags }}
+            {{ end }}
+          {{ end }}
+
+          {{ range $tags }}
+            {{ $tag := . }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $tag) }}
+              <a href="{{ .Permalink }}" class="tagcloud-link">{{ $tag }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+    </aside>
