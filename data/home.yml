@@ -50,17 +50,8 @@ map:
     - title: "Казахстан, г Алматы, ул. Богенай батыра, 104"
       icon: "fas fa-location-dot"
 
-    - title: "+77019992939"
+    - title: '<a target="_blank" rel="noopener noreferrer" href="tel:+77019992939">+77019992939</a>'
       icon: "fas fa-phone"
 
-    - title: "info@interopt-company.ru"
+    - title: '<a target="_blank" href="mailto:info@interopt-company.ru">info@interopt-company.ru</a>'
       icon: "fas fa-paper-plane"
-
-  # Google Maps widget: If "googleMapsApiKey" is not set, no key will be passed to Google (which likely results in a broken map widget).
-  # googleMapsApiKey: "AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"
-  # latitude: "-37.8602828"
-  # longitude: "145.079616"
-  # iconLocation: "/images/icon-location.png"
-  # titleIconLocation: "Melbourne, Australia"
-  # colorMap: "#2d313f"
-  # mapZoom: 10

@@ -12,8 +12,16 @@ sections:
   - mapSection
 
 # Background image
-singleImage: 
+singleImage:
   enable: true
-  image: /images/background2.jpg
+  image: /images/header.jpg
+
+# Background effect
+LowPolyEffect:
+  enable: true
+  color: "rgba(255,255,255,0.04)"
+  opacity: 0.3
+  size: 0.3
+  density: 100
 
 ---

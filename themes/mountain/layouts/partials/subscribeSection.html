@@ -7,7 +7,7 @@
     <div class="row">
       <h2 data-aos="custom-fade-up" data-aos-delay="100" data-aos-once="true"><i aria-hidden="true" class="{{ .icon }}"></i>{{ .title }}</h2>
       <form id="g-form" data-aos="custom-fade-up" data-aos-delay="200" data-aos-once="true" action="https://docs.google.com/forms/u/0/d/e/{{ .formId }}/formResponse" method="POST" target="_blank">
-        <input id="mc-email" type="text" name="{{ .entryId }}" placeholder="{{ i18n "yourEmail" }}">
+        <input id="mc-email" type="text" name="{{ .entryId }}" placeholder="{{ i18n "yourEmail" }}" required>
         <button type="submit">{{ i18n "submit" }}</button>
         <label for="mc-email"></label>
       </form>
